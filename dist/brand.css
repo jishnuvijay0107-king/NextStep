@@ -1,0 +1,50 @@
+/* NextStep / a folded architectural N, lit from within. */
+.brand{display:inline-flex;align-items:center;gap:9px;letter-spacing:0;overflow:visible;max-width:100%;position:relative;isolation:isolate}
+.brand .nextstep-mark{width:46px;height:46px;flex-shrink:0;padding:0;background:none;border:0;border-radius:0;box-shadow:none;stroke-width:initial;overflow:visible;filter:drop-shadow(0 4px 5px #0006);transition:filter .5s,transform .5s}
+.nextstep-wordmark{min-width:0;position:relative;display:flex;align-items:center;padding:6px 0;isolation:isolate}
+.nextstep-lettering{display:inline-flex;align-items:baseline;white-space:nowrap;font-family:'DM Sans','Segoe UI',Arial,sans-serif;font-size:28px;line-height:1.15;font-weight:700;text-transform:none;letter-spacing:-1.8px;color:#f0f3f4;position:relative}
+.nextstep-first{font-style:normal;font-weight:700;color:#f0f3f4;background:none}
+.nextstep-second{font-style:normal;font-weight:500;letter-spacing:-1.8px;margin-left:0;color:#c6cdd3;background:none}
+.nextstep-punct{display:inline-block;width:4px;height:4px;background:#e8ae83;transform:rotate(-12deg);margin-left:3px;box-shadow:0 0 8px #e4a17144}
+.prism-left,.prism-right,.prism-bridge{transition:transform .6s cubic-bezier(.16,1,.3,1);transform-origin:40px 40px}
+.prism-seam{animation:nextstep-prism-light 5.5s linear infinite;filter:drop-shadow(0 0 3px #efb587)}
+.prism-signal{opacity:.25;transition:opacity .5s}
+.brand:hover .prism-left{transform:translate(-3px,1px)}
+.brand:hover .prism-right{transform:translate(3px,-2px)}
+.brand:hover .prism-bridge{transform:translateY(-1px)}
+.brand:hover .prism-signal{opacity:1}
+.brand:hover .nextstep-mark{filter:drop-shadow(0 2px 12px #e1a57940);transform:translateY(-2px)}
+.brand:hover .prism-seam{animation-duration:1.3s}
+.brand:active .nextstep-mark{transform:scale(.92)}
+.nextstep-wordmark::after{content:'';position:absolute;inset:-2px -6px;pointer-events:none;background:linear-gradient(110deg,transparent 30%,#fbe2c817 50%,transparent 70%);opacity:0;transform:translateX(-18px)}
+.brand:hover .nextstep-wordmark::after{animation:nextstep-prism-sweep .9s ease-out}
+.opening-content h1{margin:0 auto;padding:0;line-height:1;width:auto;max-width:90vw;background:none;color:inherit;text-shadow:none;letter-spacing:0}
+.opening-content h1 .nextstep-lettering{font-size:clamp(52px,8.5vw,110px);letter-spacing:-6px;line-height:1.25;filter:drop-shadow(0 0 22px #b5dbe31c)}
+.opening-content h1 .nextstep-second{letter-spacing:-6px;margin-left:0}
+.opening-content h1 .nextstep-punct{width:10px;height:10px;margin-left:10px}
+.opening-seal{width:120px;height:120px;margin-bottom:22px;animation:nextstep-prism-emerge 1.3s cubic-bezier(.16,1,.3,1) both}
+.opening-seal .nextstep-mark{width:100%;height:100%;stroke-width:initial;overflow:visible;filter:drop-shadow(0 5px 25px #dfa46c2b)}
+.opening-wave path{stroke-width:1.2}.opening-rule{background:#b6cbd329}.opening-kicker{color:#b2c4ca}
+/* Compact, readable access: one short label instead of a wide promotional card. */
+#boss-root .boss-dock{gap:6px;right:20px;bottom:72px}
+#boss-root .boss-launch{min-height:44px;height:44px;padding:7px 11px 7px 8px;gap:9px;border-radius:15px 15px 5px 15px}
+#boss-root .boss-launch .boss-launch-mark{width:27px;height:27px}
+#boss-root .boss-launch .boss-launch-mark::before{inset:-2px}
+#boss-root .boss-launch .boss-emblem{width:22px;height:22px}
+#boss-root .boss-launch strong{font-size:12px;letter-spacing:0;white-space:nowrap}
+#boss-root .boss-launch small{display:none}
+#boss-root .boss-dock-wave{width:17px;height:20px;gap:1px;margin:0}
+#boss-root .boss-dock-wave i{width:1px;height:15px}
+#boss-root .boss-launch>svg{display:none}
+#boss-root .boss-wake{width:44px;height:44px;background:transparent;border-color:#779eae60;box-shadow:none}
+#boss-root .boss-wake svg{width:15px;height:15px}
+
+
+
+@keyframes nextstep-prism-light{from{stroke-dashoffset:78}to{stroke-dashoffset:0}}
+@keyframes nextstep-prism-sweep{35%{opacity:1}to{opacity:0;transform:translateX(18px)}}
+@keyframes nextstep-prism-emerge{from{opacity:0;transform:translateY(18px) rotateY(-35deg) scale(.8);filter:blur(7px)}to{opacity:1;transform:none;filter:none}}
+@media(min-width:761px) and (max-width:1100px){.brand .nextstep-mark{width:38px;height:38px}.brand .nextstep-lettering{font-size:26px;letter-spacing:-1.7px}.brand .nextstep-second{letter-spacing:-1.7px}}
+@media(max-width:760px){.brand .nextstep-mark{width:44px;height:44px}.nextstep-lettering{font-size:29px}}
+@media(max-width:600px){.opening-seal{width:104px;height:104px}.opening-content h1 .nextstep-lettering{font-size:clamp(46px,12vw,64px);letter-spacing:-3px}.opening-content h1 .nextstep-second{letter-spacing:-3px}#boss-root .boss-dock{right:13px;bottom:65px;gap:5px}#boss-root .boss-launch{min-height:44px;height:44px;padding:7px 10px 7px 8px;gap:8px}#boss-root .boss-launch strong{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.brand *,.brand *::after,.opening-seal *{animation:none!important;transition:none!important}.prism-seam{stroke-dasharray:none;opacity:.4}}
