@@ -25,3 +25,7 @@ Appearance: the floating theme button switches between light and cinematic dark;
 Boss: a separate assistant overlay is available from Ask Boss or Alt+B. Setup, privacy, voice limitations and API configuration are documented in BOSS-SETUP.md. Live AI requires a server-side GROQ_API_KEY or OPENAI_API_KEY for the selected provider. Existing learning, projects, and resume flows are not modified. Run npm run test:boss for simulated-provider integration tests.
 
 Boss voice revision: spoken replies default on unless muted; Talk to Boss submits recognised questions directly, then resumes listening after speech. Hey Boss plus a question skips the introduction. Play last answer retries audio. Built-in site guides use exact current UI labels and are labelled separately from generated AI. Voice controller tests use simulated speech APIs; physical microphone recognition still needs user permission and a live device test.
+
+## Hosted deployment
+
+The Sites deployment uses a dependency-free Worker adapter in `deploy/`. Run `npm run build:sites` and `npm run test:hosted` to build and check the hosted artifact. Local development still uses `npm start`. The build embeds frontend assets and reviewed-in-source reference data; it does not read or embed `.env`. Configure provider keys as secret runtime variables in Sites. Hosted AI requests require the identity validated by Sites; current site access stays owner-only. Browser profiles and progress remain specific to each browser and origin.
