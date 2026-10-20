@@ -29,3 +29,7 @@ Boss voice revision: spoken replies default on unless muted; Talk to Boss submit
 ## Hosted deployment
 
 The Sites deployment uses a dependency-free Worker adapter in `deploy/`. Run `npm run build:sites` and `npm run test:hosted` to build and check the hosted artifact. Local development still uses `npm start`. The build embeds frontend assets and reviewed-in-source reference data; it does not read or embed `.env`. Configure provider keys as secret runtime variables in Sites. Hosted AI requests require the identity validated by Sites; current site access stays owner-only. Browser profiles and progress remain specific to each browser and origin.
+
+## Vercel deployment
+
+`vercel.json` configures the static frontend and the Node function in `api/boss.js`. `npm run build:vercel` builds the public files, and `npm run test:vercel` checks the adapter. After linking a Vercel project, configure `AI_PROVIDER`, the selected provider model, and its API key in Production environment variables, then deploy with `npx vercel --prod`. The current Groq settings can be transferred from the private local `.env` via `node deploy/configure-vercel.cjs`; values travel through stdin and are stored as Vercel secrets. No `.env` or local Vercel credentials are uploaded or committed.

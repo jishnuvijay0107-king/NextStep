@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "vercel-public",
+  "functions": {
+    "api/boss.js": {
+      "includeFiles": "dist/{catalog,project-help}.js",
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/api/boss/:route", "destination": "/api/boss?route=:route" }
+  ]
+}

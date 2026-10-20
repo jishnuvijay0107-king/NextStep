@@ -5,3 +5,8 @@ node_modules/
 *.log
 dist/server/
 dist/.openai/
+
+.vercel/
+vercel-public/
+.vercel
+.env*
