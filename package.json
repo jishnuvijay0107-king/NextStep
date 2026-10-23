@@ -6,8 +6,6 @@
     "start": "node server.cjs",
     "check": "node --check server.cjs && node --check dist/catalog.js && node --check dist/journey.js && node --check dist/project-help.js && node --check dist/theme.js && node --check boss-server.cjs && node --check dist/boss.js && node --check dist/boss-voice.js && node --check dist/boss-runtime.js && node --check dist/opening.js && node --check dist/chapter-ui.js && node --check dist/brand.js",
     "test:boss": "node --test tests/boss.test.cjs tests/boss-voice.test.cjs",
-    "build:sites": "node deploy/build.cjs",
-    "test:hosted": "node deploy/test-worker.cjs",
     "build:vercel": "node deploy/build-vercel.cjs",
     "test:vercel": "node deploy/test-vercel.cjs"
   }

@@ -10,3 +10,5 @@ dist/.openai/
 vercel-public/
 .vercel
 .env*
+
+.openai/

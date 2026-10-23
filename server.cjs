@@ -6,7 +6,7 @@ if(fs.existsSync(envFile))process.loadEnvFile(envFile);
 const {createBossHandler}=require('./boss-server.cjs');
 const bossHandler=createBossHandler();
 const root = path.join(__dirname, 'dist');
-const types = {'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp'};
+const types = {'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.ttf':'font/ttf','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp'};
 const server = http.createServer(async (req, res) => {
   const host=req.headers.host||'';
   if(!/^(?:127\.0\.0\.1|localhost):4173$/.test(host)){res.writeHead(403);return res.end('Use localhost:4173');}
