@@ -34,3 +34,15 @@ The first pass was too close to the existing page. Replace its slogan banner and
 [ Current project / next step           | Career preparation]
 
 Use the existing palette and Manrope. A large lesson number watermark and connected lesson rail are the focal point, tied to the actual sequence. Keep alignment left, preserve approved branding and cinematic interaction effects. No fabricated achievements or opportunities.
+
+## Welcome/setup redesign
+Brief: the space image and huge serif slogan make onboarding feel generic. Focus on students choosing a direction.
+Palette: midnight #101923, panel #172532, divider #344755, text #f0f4f5, muted #adbec8, silver-blue #b9d5df. Retain copper only in approved logo.
+Type: Manrope throughout, 46–60px opening headline desktop, 32px mobile; form heading 30px, body 15px, labels 13px. No italic accent or tracked all-cap slogans.
+Rejected: another cinematic space image behind an oversized slogan.
+Selected: a career route diagram as a precise visual explanation, alongside a focused setup form. Left aligned typography, meaningful stage numbers only in setup and learning sequence.
+[ NextStep                       Setup: Details / Direction ]
+[ Make your next move clear.     | Tell us where you are.   ]
+[ Context + career route diagram| Name / Course / Year      ]
+[ Learn → Practise → Build      | Continue                  ]
+The route shows what the product does, not fictional achievements. Small-screen intro is compact and the form appears quickly. Preserve existing profile logic, Boss, logo, and other pages. Motion draws a route once on entry, supports reduced motion, and focus responds to input.
